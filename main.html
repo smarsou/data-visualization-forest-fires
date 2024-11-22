@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <script src="https://d3js.org/d3.v7.min.js">
     </script>
     
@@ -259,7 +260,7 @@ path_svg_departments= "ressources/france.svg"
     title.html(year);
 
     function previousYear(){
-      if (year> min_year){
+      if (year > min_year){
         year += -1
         reset("#svg-container")
         distributionDepartmentBetweenDate(year+'-01-01 11:09:00',year+'-12-31 11:09:00',"#svg-container")
