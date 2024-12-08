@@ -26,21 +26,12 @@ async function charts_loadData(){
         for (const i in newData){
             if (newData[i]["Nombre de décès"]!=""){
                 count["d"] += newData[i]["Nombre de décès"].toInt()
-            //     if(newData[i]["Nombre de décès"].toInt()!=0){
-            //     console.log("Mort "+newData[i]["Nombre de décès"].toInt())
-            // }
             }
             if (newData[i]["Nombre de bâtiments partiellement détruits"]!=""){
                 count["bpd"] += newData[i]["Nombre de bâtiments partiellement détruits"]
-                // if (newData[i]["Nombre de bâtiments partiellement détruits"]!=0){
-                //     console.log("BD " + newData[i]["Nombre de bâtiments partiellement détruits"])
-                // }
             }
             if (newData[i]["Nombre de bâtiments totalement détruits"]!=""){
                 count["btd"] += newData[i]["Nombre de bâtiments totalement détruits"]
-                // if (newData[i]["Nombre de bâtiments totalement détruits"]!=0){
-                //     console.log("BTD " + newData[i]["Nombre de bâtiments totalement détruits"])
-                // }
             }
         }
         max_damages = max_damages< count["d"]+ count["btd"]+ count["bpd"] ? count["d"]+ count["btd"]+ count["bpd"] : max_damages; 
@@ -53,14 +44,6 @@ async function charts_loadData(){
         }
 
         data3.push(count)
-
-        // count = 0
-        // for (const i in newData){
-        //     if (newData[i]["Nombre de bâtiments totalement détruits"]!=""){
-        //         count += newData[i]["Nombre de bâtiments totalement détruits"]
-        //     }
-        // }
-        // data4.push(count)
 
         for (const i in newData){
                 switch (newData[i]["Nature"]){
@@ -397,7 +380,6 @@ function piechart(show){
     piewidth = 600;
     pieheight = 600;
     var outerRadius = 200;
-    //var innerRadius = 0; 
     // for donut chart use this value --> 
     var innerRadius = 0;
 

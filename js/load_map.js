@@ -75,41 +75,6 @@ async function loadMap(str){
         await d3.select(str).node().append(data.documentElement);
             mapLoaded2=true;
     }
-//     var Tooltip = d3.select("#div_template")
-//     .append("div")
-//     .style("opacity", 0)
-//     .attr("class", "tooltip")
-//     .style("background-color", "white")
-//     .style("border", "solid")
-//     .style("border-width", "2px")
-//     .style("border-radius", "5px")
-//     .style("padding", "5px")
-
-//   // Three function that change the tooltip when user hover / move / leave a cell
-//   var mouseover = function(d) {
-//     Tooltip
-//       .style("opacity", 1)
-//     d3.select(this)
-//       .style("stroke", "black")
-//       .style("opacity", 1)
-//   }
-//   var mousemove = function(d) {
-//     Tooltip
-//       .html("The exact value of<br>this cell is: " + d.value)
-//       .style("left", (d3.mouse(this)[0]+70) + "px")
-//       .style("top", (d3.mouse(this)[1]) + "px")
-//   }
-//   var mouseleave = function(d) {
-//     Tooltip
-//       .style("opacity", 0)
-//     d3.select(this)
-//       .style("stroke", "none")
-//       .style("opacity", 0.8)
-//   }
-
-//   d3.selectAll('polygon').on("mouseover", mouseover)
-//   .on("mousemove", mousemove)
-//   .on("mouseleave", mouseleave)
 
 }
 

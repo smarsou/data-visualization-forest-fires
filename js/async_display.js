@@ -17,7 +17,7 @@ function observeAndDoWithData(data_p,doStuff) {
 
     function observe(){
         if(isFinished===false) {//we want it to match
-            setTimeout(observe, 50);//wait 100 millisecnds then recheck
+            setTimeout(observe, 50); //wait 50 millisecnds then recheck
         return;
         }
         doHugeStuff()
@@ -28,14 +28,8 @@ function observeAndDoWithData(data_p,doStuff) {
             booltest = true
             return;
         }
-        // console.log(isFinished)
-        // console.log(end)
         observe()
     }
     console.log("Start huge stuff")
     observe()
-    // console.log("Delete values not changed")
-    // for (const i in data){
-    //     fillReset(i)
-    // }
 }
